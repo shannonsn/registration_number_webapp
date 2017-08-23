@@ -1,0 +1,30 @@
+<br>
+<div class="body">
+  <br>
+  <h1>Registrations number</h1>
+  <br>
+  <br>
+  <form class="" action="/reg_numbers" method="post">
+    <h3>Please enter <img src="https://www.premier-number-plate.co.uk/images/yourreg.png" alt="" width="120"> number below</h3>
+    <input type="text" name="regNumbers" value="">
+    <input type="submit" name="button" value="add">
+    <br>
+    <br>
+    <h3>Want to see all numbers from a specific town?</h3>
+    <h3>Click one of the below buttons</h3>
+    <br>
+    <input type="radio" name="place" value="CA">Cape Town
+    <input type="radio" name="place" value="CJ">Paarl
+    <input type="radio" name="place" value="CY">Bellville
+    <input type="radio" name="place" value="ALL">All
+    <br>
+    <br>
+    <input type="submit" name="button" value="search">
+  </form>
+  <!-- <h2>{{plateNumbers}}</h2> -->
+  <ul>
+    {{#each plateNumbers}}
+    <h2>{{this.registrationPlates}}</h2>
+    {{/each}}
+  </ul>
+</div>

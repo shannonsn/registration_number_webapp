@@ -3,8 +3,14 @@
  const serve = require('express-static');
  const bodyParser = require('body-parser')
  const session = require('express-session')
+ const mongoose = require('mongoose');
  const app = express();
 
+ const Registrations = require('./registrations');
+
+const models = require('./models/registrationsSchemaModel');
+
+const registrations = Registrations(models);
 
  app.use(express.static('public'))
 
@@ -14,24 +20,29 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-
- app.get('/reg_numbers/', function(req, res){
-   res.render('view')
-
+// redirect to greet
+ app.get('/reg_numbers', function(req, res){
+   models.find({}, function(err, result) {
+     if (err) {
+       console.log(err);
+     } else {
+       res.render('add', {
+         plateNumbers: result
+       });
+     }
+   });
  });
 
- // app.get('/reg_number/id', function(req, res){
- //   res.send(req.params.id);
- //   console.log(req.params.id);
- // });
+ app.post('/reg_numbers', registrations.regPlateNumberFunction);
 
-// start the server
 
-var server = app.listen(3005, function () {
+  const port = process.env.PORT || 3005;
 
- var host = server.address().address;
- var port = server.address().port;
+  app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+  })
 
- console.log('app is running at http://%s:%s', host, port);
-
-});
+  app.listen(port , function(){
+    console.log('app super ready to go:' + port);
+  });
