@@ -33,7 +33,9 @@ app.use(bodyParser.json());
    });
  });
 
+ app.get('/', function(req, res){res.redirect('/reg_numbers')
  app.post('/reg_numbers', registrations.regPlateNumberFunction);
+})
 
 
   const port = process.env.PORT || 3005;
