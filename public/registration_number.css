@@ -1,9 +1,9 @@
 body{
-  background-image: url('https://www.plate-trader.com/blog/wp-content/uploads/2014/09/F1-registration-plate.jpg') no-repeat;
-  background-color: orange;
+  background: url('http://webneel.com/daily/sites/default/files/images/daily/04-2014/14-vintage.preview.jpg') no-repeat;
+  background-size: cover;
 }
 h1{
-  font-size: 2em;
+  font-size: 2.7em;
 }
 h2{
   margin-left: 12em;
@@ -14,6 +14,17 @@ h2{
   border: solid;
   text-align: center;
 }
+.body{
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  margin-left: 7em;
+  margin-right: 7em;
+}
+h3{
+  font-size: 2.3em;
+}
+
 div{
   text-align: center;
+  background-color: rgba(255,255,255,0.5);
 }
