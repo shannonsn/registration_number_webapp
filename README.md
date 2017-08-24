@@ -1,2 +1,1 @@
-# registration_numbers_webapp
 # registration_number_webapp
