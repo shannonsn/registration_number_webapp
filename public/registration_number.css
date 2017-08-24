@@ -5,14 +5,16 @@ body{
 h1{
   font-size: 2.7em;
 }
-h2{
-  margin-left: 12em;
-  margin-right: 12em;
+ul{
+  margin-left: 35%;
+  margin-right: 35%;
   font-size: 2.5em;
-  border-radius: 0.1em;
+  border-radius: 0.2em;
   background-color: yellow;
   border: solid;
   text-align: center;
+  /*background-color: rgba(255,255,255,0.5);*/
+
 }
 .body{
   text-align: center;
@@ -24,7 +26,7 @@ h3{
   font-size: 2.3em;
 }
 
-div{
-  text-align: center;
+section{
+  /*text-align: center;*/
   background-color: rgba(255,255,255,0.5);
 }

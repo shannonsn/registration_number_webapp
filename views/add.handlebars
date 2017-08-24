@@ -18,20 +18,22 @@
         <input type="radio" name="place" value="ALL">All
         <br>
         <br>
-        <input class='' type="submit" name="button" value="search">
+        <input type="submit" name="button" value="search">
     </form>
     <!-- <h2>{{plateNumbers}}</h2> -->
     <br><br>
 </div>
 <br>
 <br>
-<div>
+<section>
     <br>
-    <ul>
-        {{#each plateNumbers}}
-            <h2>{{this.registrationPlates}}</h2>
-        {{/each}}
-    </ul>
+<p>
+  {{#each plateNumbers}}
+  <ul>
+    {{this.registrationPlates}}
+  </ul>
+  {{/each}}
+</p>
     <br>
-</div>
+</section>
 </div>
