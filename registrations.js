@@ -35,15 +35,15 @@ module.exports = function(registrationsSchemaModel) {
             }
         } else if (button == 'search') {
             for (var i = 0; i < plateList.length; i++) {
-                var curPlate = plateList[i].registrationPlates;
-                if (place == 'CA' && curPlate.startsWith('CA')) {
-                    filteredPlates.push({registrationPlates: curPlate});
-                } else if (place == "CJ" && curPlate.startsWith('CJ')) {
-                    filteredPlates.push({registrationPlates: curPlate});
-                } else if (place == 'CY' && curPlate.startsWith('CY')) {
-                    filteredPlates.push({registrationPlates: curPlate});
+                var currentPlate = plateList[i].registrationPlates;
+                if (place == 'CA' && currentPlate.startsWith('CA')) {
+                    filteredPlates.push({registrationPlates: currentPlate});
+                } else if (place == "CJ" && currentPlate.startsWith('CJ')) {
+                    filteredPlates.push({registrationPlates: currentPlate});
+                } else if (place == 'CY' && currentPlate.startsWith('CY')) {
+                    filteredPlates.push({registrationPlates: currentPlate});
                 } else if (place == "ALL") {
-                    filteredPlates.push({registrationPlates: curPlate});
+                    filteredPlates.push({registrationPlates: currentPlate});
                 }
             }
             res.render('add', {
